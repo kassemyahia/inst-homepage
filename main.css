@@ -28,6 +28,16 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+.welcome-logo {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .welcom_div h1 {
   font-size: 44px;
   color: #000;
