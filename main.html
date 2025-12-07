@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo"></div>
+
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Emloyees</a></li>
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">About US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div class="welcom_div">
+            <h1>Welcome to WebInstitute</h1>
+            <p>Your gateway to quality education and management.</p>
+        </div>
+
+
+        <div class="sections-container">
+            <h1 class="control-panel-title">Control Panel</h1>
+            
+            <div class="section-1">
+                <h2>Employees</h2>
+                <p>Teachers,Managers,...</p>
+                <ul>
+                    <li><a href="">Add new employee</a></li>
+                    <li><a href="">Edit current employees</a></li>
+                </ul>
+            </div>
+
+            <div class="section-1">
+                <h2>Students</h2>
+                <p>Add/Delete Students</p>
+                <ul>
+                    <li><a href="">Add new student</a></li>
+                    <li><a href="">Edit current students</a></li>
+                </ul>
+            </div>
+
+            <div class="section-1">
+               <h2>Payments</h2>
+                <p>Manage Payments</p>
+                <ul>
+                    <li><a href="">Add new payment</a></li>
+                    <li><a href="">View payment history</a></li>
+            </div>
+        </div>
+
+        <div class="sections-container">
+            <div class="section-1">
+                <h2>Classes</h2>
+                <p>Our Available grades for now...</p>
+                <ul>
+                    <li>10th Grade</li>
+                    <li>11th Grade</li>
+                    <li>12th Grade</li>
+                </ul>
+            </div>
+
+            <div class="section-2">
+                <h2>About us</h2>
+                <p>WebInstitute was founded to help you achieve your dreams.</p>
+                <article>
+                    <h3>Our Goals</h3>
+                    <p>We provide a supportive learning environment that helps students grow academically and personally while preparing them for a successful future.</p>
+                </article>
+            </div>
+
+            <div class="section-3">
+                <h2>Contact & Support</h2>
+                <p>Get in touch with our team.</p>
+                <form>
+                    <input type="text" placeholder="Your Name">
+                    <textarea placeholder="Your Message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 WebInstitute. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
