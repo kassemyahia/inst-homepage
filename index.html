@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 
     <header class="navbar">
         <div class="logo">
-            <img src="logo/w_logo.png" alt="WebInstitute Logo">
+            <img src="assets/images/w_logo.png" alt="WebInstitute Logo">
         </div>
 
         <button class="menu-toggle" id="menuToggle">
@@ -23,8 +23,8 @@
         <nav class="nav-menu">
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Emloyees</a></li>
-                <li><a href="#">Students</a></li>
+                <li><a href="pages/employee.html">Emloyees</a></li>
+                <li><a href="pages/student.html">Students</a></li>
                 <li><a href="#">Payments</a></li>
                 <li><a href="#">About US</a></li>
             </ul>
@@ -33,7 +33,7 @@
 
     <main class="content">
         <div class="welcom_div">
-            <img src="logo/b_logo.png" alt="WebInstitute Logo" class="welcome-logo">
+            <img src="assets/images/b_logo.png" alt="WebInstitute Logo" class="welcome-logo">
             <h1>Welcome to WebInstitute</h1>
             <p>Your gateway to quality education and management.</p>
         </div>
@@ -46,8 +46,8 @@
                 <h2>Employees</h2>
                 <p>Teachers,Managers,...</p>
                 <ul>
-                    <li><a href="">Add new employee</a></li>
-                    <li><a href="">Edit current employees</a></li>
+                    <li><a href="pages/createemp.html">Add new employee</a></li>
+                    <li><a href="pages/employee.html">Edit current employees</a></li>
                 </ul>
             </div>
 
@@ -55,8 +55,8 @@
                 <h2>Students</h2>
                 <p>Add/Delete Students</p>
                 <ul>
-                    <li><a href="">Add new student</a></li>
-                    <li><a href="">Edit current students</a></li>
+                    <li><a href="pages/createstu.html">Add new student</a></li>
+                    <li><a href="pages/student.html">Edit current students</a></li>
                 </ul>
             </div>
 
@@ -105,23 +105,6 @@
         <p>&copy; 2024 WebInstitute. All rights reserved.</p>
     </footer>
 
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.querySelector('.nav-menu');
-        const navLinks = document.querySelectorAll('.nav-links a');
-
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-    </script>
-
+    <script src="assets/js/menu.js"></script>
 </body>
 </html>
