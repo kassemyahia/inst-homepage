@@ -244,7 +244,7 @@ tbody tr:hover {
 /* الاستجابة للأجهزة المختلفة */
 @media (max-width: 768px) {
     .container {
-        margin: 20px;
+        margin: 80px 20px 40px 20px;
         padding: 15px;
     }
 
@@ -282,6 +282,10 @@ tbody tr:hover {
 }
 
 @media (max-width: 480px) {
+    .container {
+        margin: 100px 20px 40px 20px;
+    }
+
     .form-title {
         font-size: 20px;
     }

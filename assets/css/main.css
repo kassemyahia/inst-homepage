@@ -226,3 +226,30 @@
   font-weight: 500;
 }
 
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px;
+    margin-top: 80px;
+  }
+
+  .welcom_div {
+    padding: 30px 20px;
+  }
+
+  .control-panel-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    margin-top: 100px;
+    padding: 15px;
+  }
+
+  .welcom_div {
+    padding: 20px 15px;
+  }
+}
+
