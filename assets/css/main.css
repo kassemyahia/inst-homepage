@@ -2,7 +2,7 @@
 /* Main Page Styles */
 .content {
   padding: 40px;
-  margin-top: 60px;
+  margin-top: 0;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   min-height: 100vh;
 }
@@ -230,7 +230,6 @@
 @media (max-width: 768px) {
   .content {
     padding: 20px;
-    margin-top: 80px;
   }
 
   .welcom_div {
@@ -244,7 +243,6 @@
 
 @media (max-width: 480px) {
   .content {
-    margin-top: 100px;
     padding: 15px;
   }
 
