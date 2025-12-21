@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add Student | WebInstitute</title>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css" />
+  </head>
+  <body class="bg-light pt-5">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../home.html">
+          <img src="../../assets/images/logo-light.png" height="40" alt="WebInstitute" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-2 align-items-center">
+            <li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../employee/index.html">Employees</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.html">Students</a></li>
+            <li class="nav-item"><a class="nav-link" href="../payments/index.html">Payments</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5 pt-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h4 class="card-title text-center mb-4">Add Student</h4>
+
+              <form method="POST" action="#">
+                <div class="mb-3">
+                  <label class="form-label">First Name</label>
+                  <input type="text" name="first_name" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" name="last_name" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Gender</label>
+                  <select class="form-select" name="gender">
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Birth Date</label>
+                  <input type="date" name="birth_date" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Registration Date</label>
+                  <input type="date" name="registration_date" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Stage</label>
+                  <select name="stage_id" id="stageSelect" class="form-select">
+                    <option value="">Select stage</option>
+                    <option value="stage-1">Primary Stage</option>
+                    <option value="stage-2">Secondary Stage</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Section</label>
+                  <select name="section_id" id="sectionSelect" class="form-select" required>
+                    <option value="">Select section</option>
+                    <option value="A" data-stage="stage-1">A</option>
+                    <option value="B" data-stage="stage-1">B</option>
+                    <option value="C" data-stage="stage-2">C</option>
+                    <option value="D" data-stage="stage-2">D</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Full Price</label>
+                  <input type="number" min="0" step="0.01" name="full_price" class="form-control" />
+                </div>
+
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="1" id="is_fully_paid" name="is_fully_paid" />
+                  <label class="form-check-label" for="is_fully_paid">
+                    Fully Paid
+                  </label>
+                </div>
+
+                <div class="text-center">
+                  <button class="btn btn-dark px-4" type="submit">Save Student</button>
+                  <a href="index.html" class="btn btn-danger px-4">Cancel</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/bootstrap.js"></script>
+    <script>
+      (function () {
+        const stageSelect = document.getElementById('stageSelect');
+        const sectionSelect = document.getElementById('sectionSelect');
+        const sections = Array.from(sectionSelect.options)
+          .filter(opt => opt.value !== '')
+          .map(opt => ({
+            id: opt.value,
+            name: opt.textContent,
+            stageId: opt.dataset.stage || '',
+          }));
+
+        function renderSections(stageId) {
+          sectionSelect.innerHTML = '<option value="">Select section</option>';
+          const filtered = stageId ? sections.filter(s => s.stageId === stageId) : sections;
+          filtered.forEach(sec => {
+            const opt = document.createElement('option');
+            opt.value = sec.id;
+            opt.textContent = sec.name;
+            opt.dataset.stage = sec.stageId;
+            sectionSelect.appendChild(opt);
+          });
+        }
+
+        renderSections(stageSelect.value);
+        stageSelect.addEventListener('change', (e) => {
+          renderSections(e.target.value);
+        });
+      })();
+    </script>
+  </body>
+</html>

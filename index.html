@@ -1,109 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome | WebInstitute</title>
 
-    <header class="navbar">
-        <div class="logo">
-            <img src="assets/images/w_logo.png" alt="WebInstitute Logo">
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    class="d-flex align-items-center justify-content-end min-vh-100"
+    style="
+      background: url('assets/images/images.jpeg') center / cover
+        no-repeat;
+      padding: clamp(24px, 6vw, 96px);
+    "
+  >
+    <main class="container-fluid">
+      <div class="row justify-content-end">
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+          <div
+            class="p-4 p-md-5 text-white rounded-4 shadow-lg text-center"
+            style="background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(12px)"
+          >
+            <div class="mb-4">
+              <i class="bx bxs-rocket bx-lg"></i>
+            </div>
+            <h1 class="fw-semibold mb-3">Welcome to WebInstitute</h1>
+            <p class="mb-4 text-white-50">
+              Seamlessly manage your learning experience. Log in if you already
+              have an account or create a new one to get started.
+            </p>
+
+            <div class="d-grid gap-3">
+              <a
+                href="pages/auth/login.html"
+                class="btn btn-light rounded-pill py-2 fw-semibold shadow"
+              >
+                Login
+              </a>
+              <a
+                href="pages/auth/register.html"
+                class="btn btn-outline-light rounded-pill py-2 fw-semibold"
+              >
+                Sign up
+              </a>
+              <a
+                href="pages/home.html"
+                class="btn btn-outline-light rounded-pill py-2 fw-semibold"
+              >
+                Continue as guest
+              </a>
+            </div>
+          </div>
         </div>
-
-        <button class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav class="nav-menu">
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="pages/employee.html">Emloyees</a></li>
-                <li><a href="pages/student.html">Students</a></li>
-                <li><a href="#">Payments</a></li>
-                <li><a href="#">About US</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="content">
-        <div class="welcom_div">
-            <img src="assets/images/b_logo.png" alt="WebInstitute Logo" class="welcome-logo">
-            <h1>Welcome to WebInstitute</h1>
-            <p>Your gateway to quality education and management.</p>
-        </div>
-
-
-        <div class="sections-container">
-            <h1 class="control-panel-title">Control Panel</h1>
-            
-            <div class="section-1">
-                <h2>Employees</h2>
-                <p>Teachers,Managers,...</p>
-                <ul>
-                    <li><a href="pages/createemp.html">Add new employee</a></li>
-                    <li><a href="pages/employee.html">Edit current employees</a></li>
-                </ul>
-            </div>
-
-            <div class="section-1">
-                <h2>Students</h2>
-                <p>Add/Delete Students</p>
-                <ul>
-                    <li><a href="pages/createstu.html">Add new student</a></li>
-                    <li><a href="pages/student.html">Edit current students</a></li>
-                </ul>
-            </div>
-
-            <div class="section-1">
-               <h2>Payments</h2>
-                <p>Manage Payments</p>
-                <ul>
-                    <li><a href="">Add new payment</a></li>
-                    <li><a href="">View payment history</a></li>
-            </div>
-        </div>
-
-        <div class="sections-container">
-            <div class="section-1">
-                <h2>Classes</h2>
-                <p>Our Available grades for now...</p>
-                <ul>
-                    <li>10th Grade</li>
-                    <li>11th Grade</li>
-                    <li>12th Grade</li>
-                </ul>
-            </div>
-
-            <div class="section-2">
-                <h2>About us</h2>
-                <p>WebInstitute was founded to help you achieve your dreams.</p>
-                <article>
-                    <h3>Our Goals</h3>
-                    <p>We provide a supportive learning environment that helps students grow academically and personally while preparing them for a successful future.</p>
-                </article>
-            </div>
-
-            <div class="section-3">
-                <h2>Contact & Support</h2>
-                <p>Get in touch with our team.</p>
-                <form>
-                    <input type="text" placeholder="Your Name">
-                    <textarea placeholder="Your Message"></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-        </div>
+      </div>
     </main>
-
-    <footer class="footer">
-        <p>&copy; 2024 WebInstitute. All rights reserved.</p>
-    </footer>
-
-    <script src="assets/js/menu.js"></script>
-</body>
+    <script src="assets/js/bootstrap.js"></script>
+  </body>
 </html>
