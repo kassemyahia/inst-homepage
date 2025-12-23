@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Subjects | WebInstitute</title>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css" />
+  </head>
+  <body class="bg-light pt-5">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../home.html">
+          <img src="../../assets/images/logo-light.png" height="40" alt="WebInstitute" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-2 align-items-center">
+            <li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../employee/index.html">Employees</a></li>
+            <li class="nav-item"><a class="nav-link" href="../student/index.html">Students</a></li>
+            <li class="nav-item"><a class="nav-link" href="../payments/index.html">Payments</a></li>
+            <li class="nav-item"><a class="nav-link" href="../grades/index.html">Grades</a></li>
+            <li class="nav-item"><a class="nav-link" href="../top-students/index.html">Top Students</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.html">Subjects</a></li>
+            <li class="nav-item"><a class="nav-link" href="../classrooms/index.html">Class Rooms</a></li>
+            <li class="nav-item"><a class="nav-link" href="../phone/index.html">Phone Numbers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5 pt-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h3 class="mb-1">Subjects</h3>
+          <p class="text-muted mb-0">View and add subjects per section.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0">All Subjects</h5>
+                <span class="badge bg-light text-dark">6 total</span>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-sm align-middle text-center">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Stage</th>
+                      <th>Section</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Mathematics</td>
+                      <td>Primary</td>
+                      <td>A</td>
+                      <td class="text-end">
+                        <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Science</td>
+                      <td>Primary</td>
+                      <td>B</td>
+                      <td class="text-end">
+                        <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Physics</td>
+                      <td>Secondary</td>
+                      <td>Science</td>
+                      <td class="text-end">
+                        <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>English Literature</td>
+                      <td>Secondary</td>
+                      <td>Literature</td>
+                      <td class="text-end">
+                        <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>History</td>
+                      <td>Preparatory</td>
+                      <td>General</td>
+                      <td class="text-end">
+                        <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Computer Science</td>
+                      <td>Preparatory</td>
+                      <td>General</td>
+                      <td class="text-end">
+                        <button type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Add Subject</h5>
+              <form method="POST" action="#">
+                <div class="mb-3">
+                  <label class="form-label">Subject Name</label>
+                  <input type="text" name="name" class="form-control" placeholder="e.g. Biology" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Section</label>
+                  <select name="section_id" class="form-select" required>
+                    <option value="">Select section</option>
+                    <option value="11">Primary — A</option>
+                    <option value="12">Primary — B</option>
+                    <option value="21">Secondary — Science</option>
+                    <option value="22">Secondary — Literature</option>
+                    <option value="31">Preparatory — General</option>
+                  </select>
+                </div>
+                <button class="btn btn-dark btn-sm" type="submit">Save Subject</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/bootstrap.js"></script>
+  </body>
+</html>

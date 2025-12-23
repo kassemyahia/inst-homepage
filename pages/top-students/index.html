@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Top Students | WebInstitute</title>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css" />
+  </head>
+  <body class="bg-light pt-5">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../home.html">
+          <img src="../../assets/images/logo-light.png" height="40" alt="WebInstitute" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-2 align-items-center">
+            <li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../employee/index.html">Employees</a></li>
+            <li class="nav-item"><a class="nav-link" href="../student/index.html">Students</a></li>
+            <li class="nav-item"><a class="nav-link" href="../payments/index.html">Payments</a></li>
+            <li class="nav-item"><a class="nav-link" href="../grades/index.html">Grades</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.html">Top Students</a></li>
+            <li class="nav-item"><a class="nav-link" href="../subjects/index.html">Subjects</a></li>
+            <li class="nav-item"><a class="nav-link" href="../classrooms/index.html">Class Rooms</a></li>
+            <li class="nav-item"><a class="nav-link" href="../phone/index.html">Phone Numbers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5 pt-4">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+        <div>
+          <h3 class="mb-1">Top Students</h3>
+          <p class="text-muted mb-0">Pick a stage and section to rank students by their average grade.</p>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <form method="GET" action="#">
+            <div class="row g-2 align-items-end">
+              <div class="col-lg-4">
+                <label class="form-label">Stage</label>
+                <select name="stage_id" class="form-select">
+                  <option value="">All stages</option>
+                  <option value="1">Primary</option>
+                  <option value="2">Secondary</option>
+                  <option value="3">Preparatory</option>
+                </select>
+              </div>
+              <div class="col-lg-4">
+                <label class="form-label">Section</label>
+                <select name="section_id" class="form-select">
+                  <option value="">All sections</option>
+                  <option value="11">Primary - A</option>
+                  <option value="12">Primary - B</option>
+                  <option value="21">Secondary - Science</option>
+                  <option value="22">Secondary - Literature</option>
+                  <option value="31">Preparatory - General</option>
+                </select>
+              </div>
+              <div class="col-lg-2 d-grid">
+                <button class="btn btn-dark" type="submit">Filter</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">Ranked Students</h5>
+            <span class="badge bg-light text-dark">5 students</span>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-striped align-middle text-center">
+              <thead class="table-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Stage</th>
+                  <th>Section</th>
+                  <th>Average</th>
+                  <th>Grades Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Ahmad Saleh</td>
+                  <td>Primary</td>
+                  <td>A</td>
+                  <td>95.25</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Lina Hassan</td>
+                  <td>Primary</td>
+                  <td>B</td>
+                  <td>92.50</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Karim Habib</td>
+                  <td>Secondary</td>
+                  <td>Science</td>
+                  <td>88.75</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Sara Kim</td>
+                  <td>Secondary</td>
+                  <td>Literature</td>
+                  <td>84.50</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Omar Nasser</td>
+                  <td>Preparatory</td>
+                  <td>General</td>
+                  <td>80.00</td>
+                  <td>4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

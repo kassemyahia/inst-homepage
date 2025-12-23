@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Class Rooms | WebInstitute</title>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css" />
+  </head>
+  <body class="bg-light pt-5">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../home.html">
+          <img src="../../assets/images/logo-light.png" height="40" alt="WebInstitute" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-2 align-items-center">
+            <li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../employee/index.html">Employees</a></li>
+            <li class="nav-item"><a class="nav-link" href="../student/index.html">Students</a></li>
+            <li class="nav-item"><a class="nav-link" href="../payments/index.html">Payments</a></li>
+            <li class="nav-item"><a class="nav-link" href="../grades/index.html">Grades</a></li>
+            <li class="nav-item"><a class="nav-link" href="../top-students/index.html">Top Students</a></li>
+            <li class="nav-item"><a class="nav-link" href="../subjects/index.html">Subjects</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.html">Class Rooms</a></li>
+            <li class="nav-item"><a class="nav-link" href="../phone/index.html">Phone Numbers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5 pt-4">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3">
+        <div>
+          <h3 class="mb-1">Class Rooms</h3>
+          <p class="text-muted mb-0">Pick a stage, then a section to see its students.</p>
+        </div>
+        <a href="../student/create.html" class="btn btn-dark btn-sm">Add Student</a>
+      </div>
+
+      <div class="card card-body shadow-sm mb-4">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h6 class="fw-bold">Create Stage</h6>
+            <form method="POST" action="#">
+              <div class="mb-3">
+                <label class="form-label">Stage Name</label>
+                <input type="text" name="name" class="form-control" placeholder="e.g. Secondary" required />
+              </div>
+              <button class="btn btn-dark btn-sm" type="submit">Save Stage</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <h6 class="fw-bold">Create Section in Stage</h6>
+            <form method="POST" action="#">
+              <div class="mb-3">
+                <label class="form-label">Stage</label>
+                <select name="stage_id" class="form-select" required>
+                  <option value="">Select stage</option>
+                  <option value="1">Primary</option>
+                  <option value="2">Secondary</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Section Name</label>
+                <input type="text" name="name" class="form-control" placeholder="e.g. A" required />
+              </div>
+              <button class="btn btn-dark btn-sm" type="submit">Save Section</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="mb-3">Stages &amp; Sections</h5>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="border rounded p-3 h-100 shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <strong>Primary</strong>
+                  <span class="badge bg-dark">2 sections</span>
+                </div>
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="fw-semibold">Section A</span>
+                    <span class="badge bg-light text-dark">2 students</span>
+                  </div>
+                  <ul class="list-unstyled mb-0 small">
+                    <li>Ahmad Saleh (M)</li>
+                    <li>Lina Hassan (F)</li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="fw-semibold">Section B</span>
+                    <span class="badge bg-light text-dark">2 students</span>
+                  </div>
+                  <ul class="list-unstyled mb-0 small">
+                    <li>Omar Nasser (M)</li>
+                    <li>Nour Yousef (F)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="border rounded p-3 h-100 shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <strong>Secondary</strong>
+                  <span class="badge bg-dark">2 sections</span>
+                </div>
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="fw-semibold">Science</span>
+                    <span class="badge bg-light text-dark">2 students</span>
+                  </div>
+                  <ul class="list-unstyled mb-0 small">
+                    <li>Karim Habib (M)</li>
+                    <li>Sara Kim (F)</li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="fw-semibold">Literature</span>
+                    <span class="badge bg-light text-dark">1 student</span>
+                  </div>
+                  <ul class="list-unstyled mb-0 small">
+                    <li>Maya Haddad (F)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
